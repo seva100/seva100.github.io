@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Hi, Jon Here. Please DELETE the two <script> tags below if you use this HTML, otherwise my analytics will track your page -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-7580334-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-7580334-2');
+  </script> -->
+
+  <title>Artem Sevastopolsky</title>
+  
+  <meta name="author" content="Artem Sevastopolsky">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+
+<body>
+  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:63%;vertical-align:middle">
+              <p style="text-align:center">
+                <name>Artem Sevastopolsky</name>
+              </p>
+              <p>I am a Ph.D. candidate at <a href="skoltech.ru">Skoltech</a> and a deep learning engineer at the Vision, Learning and Telepresence lab at <a href="http://research.samsung.com/aicenter_moscow">Samsung AI Center Moscow</a>, where I work on computer vision tasks related to human telepresence under the supervision of Prof. <a href="http://sites.skoltech.ru/compvision/members/vilem/">Victor Lempitsky</a>.
+              </p>
+              <p>
+                <!-- At Google I've worked on <a href="https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a>, <a href="https://ai.googleblog.com/2014/10/hdr-low-light-and-high-dynamic-range.html">HDR+</a>, <a href="https://www.google.com/get/cardboard/jump/">Jump</a>, <a href="https://ai.googleblog.com/2017/10/portrait-mode-on-pixel-2-and-pixel-2-xl.html">Portrait Mode</a>, and <a href="https://www.youtube.com/watch?v=JSnB06um5r4">Glass</a>. I did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a> and funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. I did my bachelors at the <a href="http://cs.toronto.edu">University of Toronto</a>. -->
+
+                At Samsung & Skoltech I worked on <a href="https://saic-violet.github.io/npbg/">realistic differentiable rendering of 3D point clouds</a>, <a href="https://saic-violet.github.io/coordinpaint/">human photo-to-texture synthesis</a>, <a href=""></a> <a href="data/Thesis_Sevastopolskiy_A.pdf">differentiable warping methods for view resynthesis</a> and other projects. Currently, I'm involved in the development of the relightable rendering of 3D human models. Previously, I was more into medical imaging at Lomonosov Moscow State University and in the industry.
+
+                <!-- I've recieved the <a href="https://www2.eecs.berkeley.edu/Students/Awards/15/">C.V. Ramamoorthy Distinguished Research Award</a> and the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>. -->
+
+
+              </p>
+              <p style="text-align:center">
+                <a href="mailto:artem.sevastopolsky@gmail.com">Email</a> &nbsp/&nbsp
+                <a href="data/CV - Sevastopolsky Artem.pdf">CV</a> &nbsp/&nbsp
+                <!-- <a href="data/JonBarron-bio.txt">Biography</a> &nbsp/&nbsp -->
+                <a href="https://scholar.google.com/citations?user=fTSCTYQAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
+                <a href="https://github.com/seva100">GitHub</a> &nbsp/&nbsp
+                <a href="https://www.facebook.com/profile.php?id=100006505606156">Facebook</a> &nbsp/&nbsp
+                <a href="https://twitter.com/ASevastopolsky">Twitter</a>
+              </p>
+            </td>
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <a href="images/Avatar_crop2.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/Avatar_crop2.jpg" class="hoverZoomLink"></a>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+            <tr>
+            <td style="padding:20px;width:100%;vertical-align:middle">
+              <heading>Featured Research</heading>
+              <p>
+                At the moment I'm mostly interested in applications of computer vision to 3D computer graphics and photorealistic rendering.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+            <tr onmouseout="npbg_stop()" onmouseover="npbg_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='npbg_image'>
+                      <img src='images/npbg_render.jpg' width="160"></div>
+                    <img src='images/npbg_pc.jpg' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function npbg_start() {
+                      document.getElementById('npbg_image').style.opacity = "1";
+                    }
+    
+                    function npbg_stop() {
+                      document.getElementById('npbg_image').style.opacity = "0";
+                    }
+                    npbg_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://saic-violet.github.io/npbg/">
+                    <papertitle>Neural point-based graphics</papertitle>
+                  </a>
+                  <br>
+                  <a href="https://github.com/duburlan">Kara-Ali Aliev</a>,
+                  <strong>Artem Sevastopolsky</strong>,
+                  <a href="https://github.com/mvkolos">Maria Kolos</a>,
+                  <a href="https://dmitryulyanov.github.io/about">Dmitry Ulyanov</a>,
+                  <a href="http://sites.skoltech.ru/compvision/members/vilem/">Victor Lempitsky</a>
+                  <br>
+            <em>ECCV</em>, 2020  
+                  <br>
+                  <a href="https://saic-violet.github.io/npbg/">project page</a> /
+                  <a href="https://youtu.be/2uIe4iD4gSY">video</a>
+            /
+                  <a href="https://arxiv.org/pdf/1906.08240.pdf">arXiv</a>
+            /
+                  <a href="https://github.com/alievk/npbg">code</a>
+                  <p></p>
+                  <p>Given RGB(D) images and a point cloud reconstruction of a scene, our neural network generates extreme novel views of the scene which look highly photoreal.</p>
+                </td>
+              </tr> 
+        
+
+
+          <tr onmouseout="coordinpaint_stop()" onmouseover="coordinpaint_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='coordinpaint_image'>
+                  <img src='images/coordinpaint_garment_after.png' width="160"></div>
+                <img src='images/coordinpaint_garment_before.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function coordinpaint_start() {
+                  document.getElementById('coordinpaint_image').style.opacity = "1";
+                }
+
+                function coordinpaint_stop() {
+                  document.getElementById('coordinpaint_image').style.opacity = "0";
+                }
+                coordinpaint_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://saic-violet.github.io/coordinpaint/">
+                <papertitle>Coordinate-based texture inpainting for pose-guided human image generation</papertitle>
+              </a>
+              <br>
+              <a href="https://scholar.google.com/citations?user=xJP6avcAAAAJ&hl=en">Artur Grigorev</a>,
+              <strong>Artem Sevastopolsky</strong>,
+              <a href="https://scholar.google.com/citations?user=g_2iut0AAAAJ&hl=en">Alexander Vakhitov</a>,
+              <a href="http://sites.skoltech.ru/compvision/members/vilem/">Victor Lempitsky</a>
+              <br>
+        <em>CVPR</em>, 2019  
+              <br>
+              <a href="https://saic-violet.github.io/coordinpaint/">project page</a>
+        /
+              <a href="https://arxiv.org/pdf/1811.11459.pdf">arXiv</a>
+        /
+              <a href="https://saic-violet.github.io/coordinpaint/files/SupMat.pdf">supmat</a>
+              <p></p>
+              <p>How would I look in a different pose? Or in different clothes? A ConvNet with coordinate-based texture inpainting to the rescue. </p>
+            </td>
+          </tr> 
+    
+    
+          <tr onmouseout="stack_stop()" onmouseover="stack_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='stack_image'>
+                    <video width=100% height=100% muted autoplay loop>
+                    <source src="images/stack-swipe-gamma.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video></div>
+                <img src='images/stack-start-pic.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function stack_start() {
+                  document.getElementById('stack_image').style.opacity = "1";
+                }
+
+                function stack_stop() {
+                  document.getElementById('stack_image').style.opacity = "0";
+                }
+                stack_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://scholar.google.com/scholar?oi=bibs&cluster=3882058539166366975&btnI=1&hl=en">
+                <papertitle>Stack-U-Net: refinement network for improved optic disc and cup image segmentation</papertitle>
+              </a>
+              <br>
+              <strong>Artem Sevastopolsky</strong>,
+              <a href="https://www.linkedin.com/in/stepan-drapak-5a0060160/">Stepan Drapak</a>,
+              <a href="https://www.linkedin.com/in/konstantin-kiselev-b87b2258/">Konstantin Kiselev</a>,
+              <a href="https://www.linkedin.com/in/blake-snyder-42334966/">Blake M. Snyder</a>,
+              <a href="https://profiles.ucsf.edu/jeremy.keenan">Jeremy D. Keenan</a>,
+              <a href="https://www.linkedin.com/in/georgievskaya/">Anastasia Georgievskaya</a>
+              <br>
+              <em>SPIE Medical Imaging</em>, 2019 &nbsp <font color="red"></font>
+              <br>
+              <a href="https://arxiv.org/pdf/1804.11294v2">arXiv</a>
+              <br>
+              <p></p>
+              <p>
+              An advanced version of <em>"Optic disc and cup segmentation methods..."</em> (see below), where a segmentation is performed by a U-Net stacked multiple times, and a validation is performed on large amounts of data provided by UCSF.
+              </p>
+            </td>
+          </tr>  
+    
+          <tr onmouseout="optic_stop()" onmouseover="optic_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='optic_image'>
+                    <img src='images/optic_after.png' width="160"></div>
+                  <img src='images/optic_before.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function optic_start() {
+                    document.getElementById('optic_image').style.opacity = "1";
+                  }
+  
+                  function optic_stop() {
+                    document.getElementById('optic_image').style.opacity = "0";
+                  }
+                  optic_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://github.com/seva100/optic-nerve-cnn">
+                  <papertitle>Optic disc and cup segmentation methods for glaucoma detection with modification of U-Net convolutional neural network</papertitle>
+                </a>
+                <br>
+                <strong>Artem Sevastopolsky</strong>,
+                <br>
+                <em>Pattern Recognition & Image Analysis</em>, 2017 &nbsp <font color="red"></font>
+                <br>
+                <a href="https://arxiv.org/pdf/1704.00979">arXiv</a> /
+                <a href="https://github.com/seva100/optic-nerve-cnn">code</a>
+                <br>
+                <p></p>
+                <p>
+                Automatic segmentation of two organs on an eye fundus image allows medical doctors to make more accurate early diagnosis of glaucoma and evaluate its progression over time.
+                </p>
+              </td>
+            </tr>  
+    
+          <!-- <tr onmouseout="lighthouse_stop()" onmouseover="lighthouse_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='lh_image'><video width=100% height=100% muted autoplay loop>
+                <source src="images/rings_crop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+                </video></div>
+                <img src='images/rings.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function lighthouse_start() {
+                  document.getElementById('lh_image').style.opacity = "1";
+                }
+
+                function lighthouse_stop() {
+                  document.getElementById('lh_image').style.opacity = "0";
+                }
+                lighthouse_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://people.eecs.berkeley.edu/~pratul/lighthouse/">
+                <papertitle>Lighthouse: Predicting Lighting Volumes for Spatially-Coherent Illumination</papertitle>
+              </a>
+              <br>
+              <a href="https://people.eecs.berkeley.edu/~pratul/">Pratul Srinivasan*</a>,
+              <a href="https://people.eecs.berkeley.edu/~bmild/">Ben Mildenhall*</a>,
+              <a href="http://matthewtancik.com/">Matthew Tancik</a>,
+              <strong>Jonathan T. Barron</strong>,
+              <a href="https://research.google/people/RichardTucker/">Richard Tucker</a>,
+              <a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely</a>
+              <br>
+        <em>CVPR</em>, 2020  
+              <br>
+              <a href="https://people.eecs.berkeley.edu/~pratul/lighthouse/">project page</a>
+        /
+              <a href="https://github.com/pratulsrinivasan/lighthouse">code</a>
+        /
+              <a href="https://arxiv.org/abs/2003.08367">arXiv</a>
+        /
+              <a href="https://www.youtube.com/watch?v=KsiZpUFPqIU">video</a>
+              <p></p>
+              <p>We predict a volume from an input stereo pair that can be used to calculate incident lighting at any 3D point within a scene.</p>
+            </td>
+          </tr>   -->
+
+        </tbody></table>
+
+        <!-- <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Service</heading>
+            </td>
+          </tr>
+        </tbody></table>
+        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td>
+            <td width="75%" valign="center">
+              <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
+              <br>
+              <br>
+              <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/cs188.jpg" alt="cs188">
+            </td>
+            <td width="75%" valign="center">
+              <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
+              <br>
+              <br>
+              <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
+              <br>
+              <br>
+              <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
+            </td>
+          </tr>
+        </tbody></table> -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:right;font-size:small;">
+                The webpage template was borrowed from the exciting page of <a href="https://jonbarron.info/">Jon Barron</a>.
+              </p>
+            </td>
+          </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
