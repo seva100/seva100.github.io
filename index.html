@@ -37,7 +37,7 @@
               <p>
                 <!-- At Google I've worked on <a href="https://ai.googleblog.com/2014/04/lens-blur-in-new-google-camera-app.html">Lens Blur</a>, <a href="https://ai.googleblog.com/2014/10/hdr-low-light-and-high-dynamic-range.html">HDR+</a>, <a href="https://www.google.com/get/cardboard/jump/">Jump</a>, <a href="https://ai.googleblog.com/2017/10/portrait-mode-on-pixel-2-and-pixel-2-xl.html">Portrait Mode</a>, and <a href="https://www.youtube.com/watch?v=JSnB06um5r4">Glass</a>. I did my PhD at <a href="http://www.eecs.berkeley.edu/">UC Berkeley</a>, where I was advised by <a href="http://www.cs.berkeley.edu/~malik/">Jitendra Malik</a> and funded by the <a href="http://www.nsfgrfp.org/">NSF GRFP</a>. I did my bachelors at the <a href="http://cs.toronto.edu">University of Toronto</a>. -->
 
-              <center>At Samsung & Skoltech I worked on <a href="https://saic-violet.github.io/npbg/">realistic differentiable rendering of 3D point clouds</a>, <a href="https://saic-violet.github.io/coordinpaint/">human photo-to-texture synthesis</a>, <a href=""></a> <a href="data/Thesis_Sevastopolskiy_A.pdf">differentiable warping methods for view resynthesis</a> and other projects. Currently, I'm involved in the development of the relightable rendering of 3D human models. Previously, I was more into medical imaging at Lomonosov Moscow State University and in the industry.</center>
+              <center>At Samsung & Skoltech I worked on <a href="https://saic-violet.github.io/npbg/">realistic differentiable rendering of 3D point clouds</a>, <a href="https://saic-violet.github.io/coordinpaint/">human photo-to-texture synthesis</a>, <a href=""></a> <a href="data/Thesis_Sevastopolskiy_A.pdf">differentiable warping methods for view resynthesis</a> and other projects. Previously, I was more into medical imaging at Lomonosov Moscow State University and in the industry.</center>
 
                 <!-- I've recieved the <a href="https://www2.eecs.berkeley.edu/Students/Awards/15/">C.V. Ramamoorthy Distinguished Research Award</a> and the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>. -->
 
@@ -69,6 +69,51 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="transr_stop()" onmouseover="transpr_start()">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                  <div class="one">
+                    <div class="two" id='transpr_image'>
+                        <video width=100% height=100% muted autoplay loop>
+                        <source src="images/transpr_church_crop.mp4" type="video/mp4">
+                          Your browser does not support the video tag.
+                        </video></div>
+                    <img src='images/transpr_preview.jpg' width="160">
+                  </div>
+                  <script type="text/javascript">
+                    function transpr_start() {
+                      document.getElementById('transpr_image').style.opacity = "1";
+                    }
+    
+                    function transr_stop() {
+                      document.getElementById('transpr_image').style.opacity = "0";
+                    }
+                    stack_stop()
+                  </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                  <a href="https://saic-violet.github.io/transpr/">
+                    <papertitle>TRANSPR: Transparency Ray-Accumulating Neural 3D Scene Point Renderer</papertitle>
+                  </a>
+                  <br>
+                  <a href="https://github.com/mvkolos">Maria Kolos*</a>,
+                  <strong>Artem Sevastopolsky*</strong>,
+                  <a href="http://sites.skoltech.ru/compvision/members/vilem/">Victor Lempitsky</a>
+                  <br>
+                  <em>arXiv</em>, 2020 &nbsp <font color="red"></font>
+                  <br>
+                  <a href="https://saic-violet.github.io/transpr/">project page</a> /
+                  <a href="https://arxiv.org/pdf/2009.02819">arXiv</a>
+            /
+                  <a href="https://github.com/mvkolos/TRANSPR">code</a>
+                  <br>
+                  <p></p>
+                  <p>
+                    An extension of <a href="https://saic-violet.github.io/npbg/">Neural Point-Based Graphics</a> that can render transparent objects, both synthetic and captured in-the-wild. 
+                  </p>
+                </td>
+              </tr>  
+        
           
             <tr onmouseout="npbg_stop()" onmouseover="npbg_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
@@ -177,7 +222,7 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://scholar.google.com/scholar?oi=bibs&cluster=3882058539166366975&btnI=1&hl=en">
+              <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10949/1094928/Stack-U-Net--refinement-network-for-improved-optic-disc/10.1117/12.2511572.short">
                 <papertitle>Stack-U-Net: refinement network for improved optic disc and cup image segmentation</papertitle>
               </a>
               <br>
@@ -319,7 +364,8 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
           <tr>
             <td style="padding:0px">
-              <br>
+              <p></p><br>
+              <p></p><br>
               <p style="text-align:right;font-size:small;">
                 The webpage template was borrowed from the exciting page of <a href="https://jonbarron.info/">Jon Barron</a>.
               </p>
