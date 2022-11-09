@@ -73,21 +73,18 @@
               <td style="padding:20px;width:25%;vertical-align:middle">
                 <div class="one">
                   <div class="two" id='facerec_image'>
-                      <video width=100% height=100% muted autoplay loop>
-                      <source src="images/facerec.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                      </video></div>
+                    <img src='images/facerec_preview_hover.png' width="160"></div>
                   <img src='images/facerec_preview.png' width="160">
                 </div>
                 <script type="text/javascript">
-                  function relighting_start() {
+                  function facerec_start() {
                     document.getElementById('facerec_image').style.opacity = "1";
                   }
 
-                  function relighting_stop() {
+                  function facerec_stop() {
                     document.getElementById('facerec_image').style.opacity = "0";
                   }
-                  stack_stop()
+                  facerec_stop()
                 </script>
               </td>
               <td style="padding:20px;width:75%;vertical-align:middle">
@@ -103,10 +100,10 @@
                 <br>
                 <em>arXiv</em>, 2022 &nbsp <font color="red"></font>
                 <br>
-                <a href="">project page</a> /
-                <a href="">video</a> /
-                <a href="">arXiv</a> /
-                <a href="">code & dataset</a>
+                <a href="https://seva100.github.io/stylegan-for-facerec">project page</a> /
+                <a href="https://www.youtube.com/watch?v=DDGxAM8AI6M">video</a> /
+                <a href="https://arxiv.org/abs/2210.10090">arXiv</a> /
+                <a href="https://github.com/seva100/stylegan-for-facerec">code & dataset</a>
                 <br>
                 <p></p>
                 <p>
@@ -133,7 +130,7 @@
                     function relighting_stop() {
                       document.getElementById('relighting_image').style.opacity = "0";
                     }
-                    stack_stop()
+                    relighting_stop()
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
@@ -182,7 +179,7 @@
                     function transr_stop() {
                       document.getElementById('transpr_image').style.opacity = "0";
                     }
-                    stack_stop()
+                    transpr_stop()
                   </script>
                 </td>
                 <td style="padding:20px;width:75%;vertical-align:middle">
