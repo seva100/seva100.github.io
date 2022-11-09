@@ -1,0 +1,408 @@
+
+  <!doctype html>
+  <html lang="en">
+  
+  <head>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>How to Boost Face Recognition with StyleGAN?</title>
+    
+    <meta property="og:image"
+      content="assets/transpr/content.png" />
+    <meta property="og:title" content="How to Boost Face Recognition with StyleGAN?" />
+  
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+      integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/bootstrap-theme.min.css"> -->
+  
+    <!-- Google fonts -->
+    <!-- <link href="../css/google-fonts.css" rel="stylesheet" type="text/css"> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Open+Sans:300italic,400italic,600italic,400,700,300,600"
+      rel="stylesheet" type="text/css">
+  
+    <!-- Photoswipe -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.css" rel="stylesheet">
+    <link href="static/css/carousel.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="./static/css/bulma.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  
+    <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./static/js/bulma-carousel.min.js"></script>
+    <script src="./static/js/bulma-slider.min.js"></script> 
+    <script src="./static/js/carousel.js"></script> 
+    
+    <link rel="stylesheet" href="stylegan-for-facerec.css">
+  
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+          TeX: { equationNumbers: { autoNumber: "AMS" } },
+        });
+        </script>
+  
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML">
+      </script>
+    <script>
+      function resizeIframe(obj) {
+        obj.style.height = 0;
+        obj.style.height = (obj.contentWindow.document.body.scrollHeight + 5) + 'px';
+      }
+  
+      <!-- Favicon -->
+      // <link rel='shortcut icon' type='image/x-icon' href='assets/relightable-portrait/favicon.png' />
+      <link rel="icon" type="image/ico" href="images/stylegan-for-facerec/favicon.ico"></link>
+  
+    </script>
+    <script language="JavaScript">
+  
+      function resize_iframe() {
+        obj = document.getElementById("myiframe")
+  
+        obj.style.height = 0;
+        obj.style.height = (obj.contentWindow.document.body.scrollHeight) + 'px';
+  
+        // document.getElementById("cf").style.height = document.getElementById("lastimage").height + 8;
+      }
+        // window.onresize=resize_iframe;
+  
+  
+    </script>
+  
+  </head>
+  
+  <body>
+    <script src="zepto.min.js"></script>
+    <script>
+      window.addEventListener('message', function (event) {
+        if (height = event.data['height']) {
+          $('iframe').css('height', height + 'px')
+        }
+      });
+  
+  
+      // var resizeEvent = new Event('resize');
+      // window.dispatchEvent(resizeEvent);
+  
+    </script>
+    <div class="container">
+  
+      
+      <!-- ====================================================== -->
+      <!-- ===================== TITLE ========================== -->
+      <!-- ====================================================== -->
+      <center>
+        <div class="title" style="font-size:32pt">How to Boost Face Recognition with StyleGAN?</div>
+        <div></div>
+      </center>
+  
+      <!-- <p></p>
+      <center>
+        <div class="conference"><b></b></div>
+      </center>
+      <br> -->
+  
+      <center>
+        <div class="row row-eq-height" style="margin-bottom: 0px; margin-top: 10px">
+          <!-- <div class="col-sm-12"> -->
+          <div class="col-sm-12 col-sm-offset-1">
+  
+            <div class="col-sm-2" style="margin-bottom: 10px">
+              <!-- <div class="col-sm-12"> -->
+              <a href="https://seva100.github.io">
+                <img src="images/projects/stylegan-for-facerec/artem2_crop.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+                <div class="author"><span style="font-weight: 800">Artem Sevastopolsky</span><br><div class="affiliation">TUM</div></div>
+              </a>
+            </div>
+            <div class="col-sm-2" style="margin-bottom: 10px">
+              <!-- <div class="col-sm-12"> -->
+              <a href="https://scholar.google.com/citations?user=KvAyakQAAAAJ">
+                <img src="images/projects/stylegan-for-facerec/yury_malkov.jpeg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+                <div class="author"><span style="font-weight: 800">Yury Malkov</span><br><div class="affiliation">Twitter</div></div>
+              </a>
+            </div>
+            <div class="col-sm-2" style="margin-bottom: 10px">
+              <!-- <div class="col-sm-12"> -->
+              <a href="https://nikitadurasov.github.io/about/">
+                <img src="images/projects/stylegan-for-facerec/nikita_durasov.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+                <div class="author"><span style="font-weight: 800">Nikita Durasov</span><br><div class="affiliation">EPFL</div></div>
+              </a>
+            </div>
+            <div class="col-sm-2" style="margin-bottom: 10px">
+              <!-- <div class="col-sm-12"> -->
+              <a href="https://www.grip.unina.it/members/verdoliva">
+                <img src="images/projects/stylegan-for-facerec/luisa_verdoliva.png" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+                <div class="author"><span style="font-weight: 800">Luisa Verdoliva</span><br><div class="affiliation">University of Naples Federico II, TUM</div></div>
+              </a>
+            </div>
+            <div class="col-sm-2" style="margin-bottom: 10px">
+              <!-- <div class="col-sm-12"> -->
+              <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">
+                <img src="images/projects/stylegan-for-facerec/matthias_niessner.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100">
+                <div class="author"><span style="font-weight: 800">Matthias Nießner</span><br><div class="affiliation">TUM</div></div>
+              </a>
+            </div>
+          
+          <!-- </div> -->
+        </div>
+        </div>
+      </center>
+
+      <!-- ====================================================== -->
+      <!-- ===================== TEASER =============== -->
+      <!-- ====================================================== -->
+  
+      <center>
+        <div class="row section">
+          <div class="col-sm-10 col-sm-offset-1 cropped-scheme
+          ">
+            <img src="images/projects/stylegan-for-facerec/method.gif" class="img-responsive">
+          </div>
+        </div>
+      </center>
+      
+  
+      <!-- ====================================================== -->
+      <!-- ===================== LINKS ========================== -->
+      <!-- ====================================================== -->
+  
+      <p>&nbsp;</p>
+  
+      <center>
+        <div class="row section" style="margin-bottom: -12px">
+          <div class="col-sm-12">
+            <div class="col-sm-2 col-sm-offset-3" style="margin-bottom: 12px">
+              <a href="https://arxiv.org/pdf/2210.10090.pdf">
+                <svg xmlns="http://www.w3.org/2000/svg" class="img_links img-responsive" viewBox="0 0 24 24"><path d="M11.363 2c4.155 0 2.637 6 2.637 6s6-1.65 6 2.457v11.543h-16v-20h7.363zm.826-2h-10.189v24h20v-14.386c0-2.391-6.648-9.614-9.811-9.614zm4.811 13h-2.628v3.686h.907v-1.472h1.49v-.732h-1.49v-.698h1.721v-.784zm-4.9 0h-1.599v3.686h1.599c.537 0 .961-.181 1.262-.535.555-.658.587-2.034-.062-2.692-.298-.3-.712-.459-1.2-.459zm-.692.783h.496c.473 0 .802.173.915.644.064.267.077.679-.021.948-.128.351-.381.528-.754.528h-.637v-2.12zm-2.74-.783h-1.668v3.686h.907v-1.277h.761c.619 0 1.064-.277 1.224-.763.095-.291.095-.597 0-.885-.16-.484-.606-.761-1.224-.761zm-.761.732h.546c.235 0 .467.028.576.228.067.123.067.366 0 .489-.109.199-.341.227-.576.227h-.546v-.944z"/></svg>
+                <p></p>
+                <div class="author" style="font-size: 18pt; font-family: 'Open Sans', sans-serif;">Paper</div>
+              </a>
+            </div>
+            <!-- <div class="col-sm-2 col-sm-offset-1" style="margin-bottom: 12px"> -->
+            <div class="col-sm-2" style="margin-bottom: 12px">
+              <a href="https://youtu.be/DDGxAM8AI6M">
+                <svg xmlns="http://www.w3.org/2000/svg" class="img_links img-responsive" viewBox="0 0 24 24"><path d="M10 9.333l5.333 2.662-5.333 2.672v-5.334zm14-4.333v14c0 2.761-2.238 5-5 5h-14c-2.761 0-5-2.239-5-5v-14c0-2.761 2.239-5 5-5h14c2.762 0 5 2.239 5 5zm-4 7c-.02-4.123-.323-5.7-2.923-5.877-2.403-.164-7.754-.163-10.153 0-2.598.177-2.904 1.747-2.924 5.877.02 4.123.323 5.7 2.923 5.877 2.399.163 7.75.164 10.153 0 2.598-.177 2.904-1.747 2.924-5.877z"/></svg>
+                <p></p>
+                <div class="author" style="font-size: 18pt; font-family: 'Open Sans', sans-serif;">Video</div>
+              </a>
+            </div>
+            <div class="col-sm-2" style="margin-bottom: 12px">
+              <a href="https://github.com/seva100/stylegan-for-facerec">
+                <svg xmlns="http://www.w3.org/2000/svg"  class="img_links img-responsive" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <p></p>
+                <div class="author" style="font-size: 18pt; font-family: 'Open Sans', sans-serif;">Code <i>(coming soon...)</i></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </center>
+  
+      <!-- ====================================================== -->
+      <!-- ===================== ABSTRACT ======================= -->
+      <!-- ====================================================== -->
+  
+  
+      <div class="row section text-justify">
+        <div class="col-sm-10 col-sm-offset-1">
+          <!-- <div class="col-xs-8 col-xs-offset-2 text-justify"> -->
+          <div class="section_title">Abstract</div>
+          <p style="font-family: 'Open Sans', sans-serif; font-size: 14pt"> State-of-the-art face recognition systems require huge amounts of labeled training data. Given the priority of privacy in face recognition applications, the data is limited to celebrity web crawls, which have issues such as skewed distributions of ethnicities and limited numbers of identities. On the other hand, the self-supervised revolution in the industry motivates research on adaptation of the related techniques to facial recognition. One of the most popular practical tricks is to augment the dataset by the samples drawn from the high-resolution high-fidelity models (e.g. StyleGAN-like), while preserving the identity. We show that a simple approach based on fine-tuning an encoder for StyleGAN allows to improve upon the state-of-the-art facial recognition and performs better compared to training on synthetic face identities. We also collect large-scale unlabeled datasets with controllable ethnic constitution &mdash; AfricanFaceSet-5M (5 million images of different people) and AsianFaceSet-3M (3 million images of different people) and we show that pretraining on each of them improves recognition of the respective ethnicities (as well as also others), while combining all unlabeled datasets results in the biggest performance increase. Our self-supervised strategy is the most useful with limited amounts of labeled training data, which can be beneficial for more tailored face recognition tasks and when facing privacy concerns. Evaluation is provided based on a standard RFW dataset and a new large-scale RB-WebFace benchmark. </p>
+          <p>&nbsp;</p>
+
+          <!-- <p style="font-family: 'Open Sans', sans-serif; font-size: 14pt">Given two types of input frames (<i>flash</i> and <i>no-flash</i>), the neural pipeline is fitted to both sequences by decomposing each image into albedo, normals, and room shadows. The plausibility of decomposition is enforced by specific <i>facial priors</i> (see <a href="https://www.youtube.com/watch?v=qQnNalM9hgY">Video</a> for more detail).</p> -->
+          <!-- <p>&nbsp;</p>
+          <p style="font-family: 'Open Sans', sans-serif; font-size: 14pt">In the paper, we showcase several head portraits created for smartphone videos, as well as quantitative and qualitative comparison on synthetic people. The performance of the method is evaluated under varying lighting conditions and at the extrapolated viewpoints and compared with existing relighting methods.</p> -->
+        </div>
+      </div>
+  
+      <!-- ====================================================== -->
+      <!-- ===================== VIDEO ========================== -->
+      <!-- ====================================================== -->
+
+      <div class="row section text-justify">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="section_title">Video</div>
+          <center>
+            <div class="col-sm-10 col-sm-offset-1">
+              <div class="youtube-rounded embed-responsive embed-responsive-16by9">
+                <iframe  class="embed-responsive-item" src="https://youtube.com/embed/DDGxAM8AI6M" frameborder="0" allowfullscreen></iframe>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+      
+      <p>&nbsp;</p>
+  
+      <!-- ====================================================== -->
+      <!-- ===================== Contributions ======================= -->
+      <!-- ====================================================== -->
+      <div class="row section text-justify">
+        <div class="col-sm-10 col-sm-offset-1">
+          <!-- <div class="col-sm-8 col-sm-offset-2 text-justify"> -->
+          <div class="section_title">Main Contributions</div>
+          <center>
+            <div class="row">
+
+              <div class="col-sm-6">
+                <div class="transparent-container-rfw">
+                  <div class="transparentImage">
+                    <img src="images/projects/stylegan-for-facerec/hover-rfw-results-zeros.png" class="shadow img-responsive" width="100%" height="100%">
+                    <div class="hover-caption">
+                      <div class="hover-caption-text">
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 12pt">We show that the proposed pretraining increases the face recognition performance on the standard <font color="green">large-scale RFW benchmark</font>.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="transparent-container-limited-data">
+                  <div class="transparentImage">
+                    <img src="images/projects/stylegan-for-facerec/hover-limited-data-v2-zeros.png" class="shadow img-responsive" width="100%" height="100%">
+                    <div class="hover-caption">
+                      <div class="hover-caption-text">
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 12pt">The StyleGAN pretraining provides the most significant improvement of face recognition systems when <font color="green">only limited amounts of labeled data</font> are available.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="transparent-container-afrasian">
+                  <div class="transparentImage">
+                    <img src="images/projects/stylegan-for-facerec/hover-african-asian-faceset-zeros.png" class="shadow img-responsive" width="100%" height="100%">
+                    <div class="hover-caption">
+                      <div class="hover-caption-text">
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 12pt">The system is pretrained on random face collections. We release <font color="red">5M African</font> and <font color="red">3M Asian</font> faces gathered from random frames of YouTube videos.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="transparent-container-rb-webface">
+                  <div class="transparentImage">
+                    <img src="images/projects/stylegan-for-facerec/hover-rb-webface-positive-negative-zeros.png" class="shadow img-responsive" width="100%" height="100%">
+                    <div class="hover-caption">
+                      <div class="hover-caption-text">
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 12pt">A new fairness-concerned testing benchmark <font color="red">RB-WebFace</font> is proposed, which contains 72K people, 360K positive and 648M negative pairs.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </center>
+        </div>
+      </div>
+      <!-- ====================================================== -->
+      <!-- ==================== CITATION =============== -->
+      <!-- ====================================================== -->
+      <div class="row section">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div class="section_title">Citation</div>
+  
+            <p></p><br>
+            <b>BibTeX:</b>
+            <pre style="font-size: 12pt">@article{sevastopolsky2022boost,
+  title={How to Boost Face Recognition with StyleGAN?},
+  author={Sevastopolsky, Artem and Malkov, Yury and Durasov, Nikita and Verdoliva, Luisa and Nie{\ss}ner, Matthias},
+  journal={arXiv preprint arXiv:2210.10090},
+  year={2022}
+}</pre>
+  
+  
+        <p></p><br>
+        <p></p><br>
+        <p></p><br>
+      </div>
+  
+    </div>
+  
+    
+    
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+      integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"   
+      integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+      crossorigin="anonymous"></script>
+  
+  
+    <script type="text/javascript">
+  
+      function change_height_cf(el) {
+        if (el.height > 0) {
+          document.getElementById("cf").style.height = el.height + 8;
+        };
+      };
+  
+  
+      $(document).ready(function () {
+        // $('#firstimage').on('load', function(){
+        //    console.log(2);
+        //     change_height_cf(document.getElementById("firstimage"));
+        // });
+  
+        // if ($('#firstimage')[0].complete) {
+        //   console.log(3);
+        //   change_height_cf(document.getElementById("firstimage"));
+        // };
+  
+        // $('#lastimage').on('load', function(){
+        //   console.log(2);
+        //   change_height_cf(document.getElementById("lastimage"));
+        // });
+        // if ($('#lastimage')[0].complete) {
+        //   console.log(3);
+        //   change_height_cf(document.getElementById("lastimage"));
+        // };
+  
+        var screenWidth = $(window).width();
+        console.log(screenWidth);
+        if (screenWidth >= 800) {
+          $('#aquarium').attr('autoplay', 'autoplay');
+          $('#static_smoke').attr('autoplay', 'autoplay');
+          $('#dyn_smoke').attr('autoplay', 'autoplay');
+          $('#orig_gt').attr('autoplay', 'autoplay');
+          $('#checkerboard_gt').attr('autoplay', 'autoplay');
+          $('#flowers').attr('autoplay', 'autoplay');
+          $('#scarf_table').attr('autoplay', 'autoplay');
+          $('#scarf_and_shirt').attr('autoplay', 'autoplay');
+          $('#aloe_smoke').attr('autoplay', 'autoplay');
+          $('#jewelry_smoke').attr('autoplay', 'autoplay');
+          $('#church').attr('autoplay', 'autoplay');
+        }
+  
+      });
+  
+    </script>
+  </body>
+  
+  </html>
+  

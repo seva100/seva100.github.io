@@ -69,6 +69,51 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="facerec_stop()" onmouseover="facerec_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='facerec_image'>
+                      <video width=100% height=100% muted autoplay loop>
+                      <source src="images/facerec.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                  <img src='images/facerec_preview.jpg' width="160">
+                </div>
+                <script type="text/javascript">
+                  function relighting_start() {
+                    document.getElementById('facerec_image').style.opacity = "1";
+                  }
+
+                  function relighting_stop() {
+                    document.getElementById('facerec_image').style.opacity = "0";
+                  }
+                  stack_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://seva100.github.io/stylegan-for-facerec">
+                  <papertitle>How to Boost Face Recognition with StyleGAN?</papertitle>
+                </a>
+                <br>
+                <strong>Artem Sevastopolsky</strong>,
+                <a href="https://scholar.google.com/citations?user=KvAyakQAAAAJ">Yury Malkov,</a>
+                <a href="https://nikitadurasov.github.io/about/">Nikita Durasov,</a>
+                <a href="https://www.grip.unina.it/members/verdoliva">Luisa Verdoliva,</a>
+                <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a>
+                <br>
+                <em>arXiv</em>, 2022 &nbsp <font color="red"></font>
+                <br>
+                <a href="">project page</a> /
+                <a href="">video</a> /
+                <a href="">arXiv</a> /
+                <a href="">code & dataset</a>
+                <br>
+                <p></p>
+                <p>
+                  Can the power of generative models provide us with the face recognition on steroids? Random collections of faces + StyleGAN are the secret sauce. We release the collections themselves, as well as a new fairness-concerned testing benchmark.
+                </p>
+              </td>
+            </tr>  
 
             <tr onmouseout="relighting_stop()" onmouseover="relighting_start()">
                 <td style="padding:20px;width:25%;vertical-align:middle">
