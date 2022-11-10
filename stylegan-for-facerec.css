@@ -4,20 +4,19 @@
   margin: 0;
 }  
 
-.container {
-  /*padding: 0px;
+/*.container {
+  padding: 0px;
   margin: 0px;
   color: #a6a6a6;
   font-size: 11pt;
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 400;
-  color: #444;/*
-}
+  color: #444;
+}*/
 
 body {
-  background-color: #FFFAFA !important;
-  background-color: #FAFAFA !important;
+  background-color: #FEFCFE !important;
   /* background-color: #e6e6e6 !important;
   background-color: #e6e6e6 !important; */
 }
@@ -453,13 +452,13 @@ svg:hover {
 }
 
 .transparentImage:hover{
-  opacity: 0.75;
+  opacity: 0.8;
   transition: opacity .5s;
 }
 
 .hover-caption-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 40%;
+  transform: translate(-30%, -30%);
 }
