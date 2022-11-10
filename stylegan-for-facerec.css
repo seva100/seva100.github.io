@@ -4,7 +4,8 @@
   margin: 0;
 }  
 
-/*.container {
+.container {
+  /*
   padding: 0px;
   margin: 0px;
   color: #a6a6a6;
@@ -13,7 +14,8 @@
   font-style: normal;
   font-weight: 400;
   color: #444;
-}*/
+  */
+}
 
 body {
   background-color: #FEFCFE !important;
