@@ -41,11 +41,10 @@
 
                 <!-- I've recieved the <a href="https://www2.eecs.berkeley.edu/Students/Awards/15/">C.V. Ramamoorthy Distinguished Research Award</a> and the <a href="https://www.thecvf.com/?page_id=413#YRA">PAMI Young Researcher Award</a>. -->
 
-
               </p>
               <p style="text-align:center">
                 <a href="mailto:artem.sevastopolsky@gmail.com">Email</a> &nbsp/&nbsp
-                <a href="data/CV - Sevastopolsky Artem.pdf">CV</a> &nbsp/&nbsp
+                <a href="data/CV - Sevastopolsky Artem.pdf">CV</a> &nbsp/&nbsp 
                 <!-- <a href="data/JonBarron-bio.txt">Biography</a> &nbsp/&nbsp -->
                 <a href="https://scholar.google.com/citations?user=fTSCTYQAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
                 <a href="https://github.com/seva100">GitHub</a> &nbsp/&nbsp
@@ -69,6 +68,49 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+            <tr onmouseout="triplanenet_stop()" onmouseover="triplanenet_start()">
+              <td style="padding:20px;width:25%;vertical-align:middle">
+                <div class="one">
+                  <div class="two" id='triplanenet_image'>
+                      <video width=100% height=100% muted autoplay loop>
+                      <source src="images/triplanenet.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video></div>
+                  <img src='images/triplanenet_preview.png' width="160">
+                </div>
+                <script type="text/javascript">
+                  function triplanenet_start() {
+                    document.getElementById('triplanenet_image').style.opacity = "1";
+                  }
+
+                  function triplanenet_stop() {
+                    document.getElementById('triplanenet_image').style.opacity = "0";
+                  }
+                  triplanenet_stop()
+                </script>
+              </td>
+              <td style="padding:20px;width:75%;vertical-align:middle">
+                <a href="https://anantarb.github.io/triplanenet">
+                  <papertitle>TriPlaneNet: An Encoder for EG3D Inversion</papertitle>
+                </a>
+                <br>
+                <a href="https://scholar.google.com/citations?hl=en&user=EHvFI_0AAAAJ">Ananta Raj Bhattarai,</a>
+                <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner,</a>
+                <strong>Artem Sevastopolsky</strong>
+                <br>
+                <em>arXiv</em>, 2023 &nbsp <font color="red"></font>
+                <br>
+                <a href="https://anantarb.github.io/triplanenet">project page</a> /
+                <a href="https://www.youtube.com/watch?v=GpmSswHMeWU&feature=youtu.be">video</a> /
+                <a href="https://arxiv.org/abs/2303.13497">arXiv</a>
+                <br>
+                <p></p>
+                <p>
+                  EG3D is a powerful {z, camera}->image generative model, but inverting EG3D (finding a corresponding z for a given image) is not always trivial. We propose a fully-convolutional encoder for EG3D based on the observation that predicting both z code and tri-planes is beneficial. TriPlaneNet also works for videos and in real time (check out the <a href="https://anantarb.github.io/triplanenet">Live Demo</a>).
+                </p>
+              </td>
+            </tr>  
 
             <tr onmouseout="facerec_stop()" onmouseover="facerec_start()">
               <td style="padding:20px;width:25%;vertical-align:middle">
@@ -270,7 +312,7 @@
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://saic-violet.github.io/coordinpaint/">
+              <a href="https://dolorousrtur.github.io/coordinpaint/">
                 <papertitle>Coordinate-based texture inpainting for pose-guided human image generation</papertitle>
               </a>
               <br>
