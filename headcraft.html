@@ -66,64 +66,197 @@
                     <div class="column has-text-centered">
                         <h1 class="title is-1 publication-title">HeadCraft: Modeling High-Detail Shape Variations for Animated 3DMMs</h1>
                         <center>
-                          <div class="columns publication-authors" style="margin-bottom: 0px; margin-top: 10px">
+                          <div class="columns publication-authors" style="margin-bottom: 0px; margin-top: 10px;">
                             <!-- <div class="col-sm-12"> -->
-                            <div class="column">
+                            <div class="column ">
                                 <a href="https://seva100.github.io">
-                                  <!-- <img src="images/projects/headcraft/artem2_crop.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%" muted autoplay loop width="100%">
+                                    <div onmouseout="artem_stop()" onmouseover="artem_start()">
+                                        <div class="hover_outer">
+                                            <div class="hover_inner" id='artem_image' style="width: 130px; height: 130px; margin-left: 5px">    
+                                            <img src='assets/headcraft/coauthors_photos/Artem.jpeg'>
+                                        </div>
+                                        <video class="hover_video" id='artem_video' width=100% height=100% muted autoplay loop>
+                                            <source src="assets/headcraft/coauthors_videos/Artem.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        </div>
+                                        <script type="text/javascript">
+                                            function artem_start() {
+                                            document.getElementById('artem_image').style.opacity = "1";
+                                            document.getElementById('artem_video').style.opacity = "0";
+                                            }
+                        
+                                            function artem_stop() {
+                                            document.getElementById('artem_image').style.opacity = "0";
+                                            document.getElementById('artem_video').style.opacity = "1";
+                                            }
+                                            artem_stop()
+                                        </script>
+                                        </div>
+                                  <!-- <video class="rgb" height="100%" muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/Artem.mp4" type="video/mp4"/>
-                                  </video>
+                                  </video> -->
                                   <div class="author-block">Artem Sevastopolsky</div><br><div class="affiliation">TUM</div>
                                 </a>
                               </div>
                               <div class="column" style="margin-bottom: 10px">
                                 <!-- <div class="col-sm-12"> -->
                                 <a href="https://scholar.google.de/citations?user=WMFKDiwAAAAJ&hl=de">
-                                  <!-- <img src="images/projects/headcraft/philip_grassal.jpeg" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%"  muted autoplay loop width="100%">
+                                    <div onmouseout="philip_stop()" onmouseover="philip_start()">
+                                        <div class="hover_outer">
+                                            <div class="hover_inner" id='philip_image' style="width: 130px; height: 130px; margin-left: 5px">    
+                                            <img src='assets/headcraft/coauthors_photos/Philip.jpeg'>
+                                        </div>
+                                        <video class="hover_video" id='philip_video' width=100% height=100% muted autoplay loop>
+                                            <source src="assets/headcraft/coauthors_videos/Philip.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        </div>
+                                        <script type="text/javascript">
+                                            function philip_start() {
+                                            document.getElementById('philip_image').style.opacity = "1";
+                                            document.getElementById('philip_video').style.opacity = "0";
+                                            }
+                        
+                                            function philip_stop() {
+                                            document.getElementById('philip_image').style.opacity = "0";
+                                            document.getElementById('philip_video').style.opacity = "1";
+                                            }
+                                            philip_stop()
+                                        </script>
+                                        </div>
+                                  <!-- <video class="rgb" height="100%"  muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/Philip.mp4" type="video/mp4"/>
-                                  </video>
-                                  <div class="author-block"><span style="font-weight: 800">Philip-William Grassal</span><br><div class="affiliation">Copresence AG</div></div>
+                                  </video> -->
+                                  <div class="author-block">Philip-William Grassal</div><br><div class="affiliation">Copresence AG</div> 
                                 </a>
                               </div>
                               <div class="column" style="margin-bottom: 10px">
                                 <!-- <div class="col-sm-12"> -->
                                 <a href="https://simongiebenhain.github.io/">
-                                  <!-- <img src="images/projects/headcraft/simon_giebenhain.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%"  muted autoplay loop width="100%">
+                                    <div onmouseout="simon_stop()" onmouseover="simon_start()">
+                                        <div class="hover_outer">
+                                            <div class="hover_inner" id='simon_image' style="width: 130px; height: 130px; margin-left: 5px">    
+                                            <img src='assets/headcraft/coauthors_photos/Simon.JPG'>
+                                        </div>
+                                        <video class="hover_video" id='simon_video' width=100% height=100% muted autoplay loop>
+                                            <source src="assets/headcraft/coauthors_videos/Simon.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        </div>
+                                        <script type="text/javascript">
+                                            function simon_start() {
+                                            document.getElementById('simon_image').style.opacity = "1";
+                                            document.getElementById('simon_video').style.opacity = "0";
+                                            }
+                        
+                                            function simon_stop() {
+                                            document.getElementById('simon_image').style.opacity = "0";
+                                            document.getElementById('simon_video').style.opacity = "1";
+                                            }
+                                            simon_stop()
+                                        </script>
+                                        </div>
+                                  <!-- <video class="rgb" height="100%"  muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/Simon.mp4" type="video/mp4"/>
-                                  </video>
+                                  </video> -->
                                   <div class="author-block">Simon Giebenhain</div><br><div class="affiliation">TUM</div>
                                 </a>
                               </div>
-                              <div class="column" style="margin-bottom: 10px">
+                              <div class="column " style="margin-bottom: 10px">
                                 <!-- <div class="col-sm-12"> -->
                                 <a href="https://shahrukhathar.github.io/">
-                                  <!-- <img src="images/projects/headcraft/shahrukh_athar.png" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%"  muted autoplay loop width="100%">
+                                    <div onmouseout="shahrukh_stop()" onmouseover="shahrukh_start()">
+                                        <div class="hover_outer">
+                                            <div class="hover_inner" id='shahrukh_image'>    
+                                            <img src='assets/headcraft/coauthors_photos/ShahRukh.jpg'>
+                                        </div>
+                                        <video class="hover_video" id='shahrukh_video' width=100% height=100% muted autoplay loop>
+                                            <source src="assets/headcraft/coauthors_videos/ShahRukh.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        </div>
+                                        <script type="text/javascript">
+                                            function shahrukh_start() {
+                                            document.getElementById('shahrukh_image').style.opacity = "1";
+                                            document.getElementById('shahrukh_video').style.opacity = "0";
+                                            }
+                        
+                                            function shahrukh_stop() {
+                                            document.getElementById('shahrukh_image').style.opacity = "0";
+                                            document.getElementById('shahrukh_video').style.opacity = "1";
+                                            }
+                                            shahrukh_stop()
+                                        </script>
+                                        </div>
+                                  <!-- <video class="rgb" height="100%"  muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/ShahRukh.mp4" type="video/mp4"/>
-                                  </video>
+                                  </video> -->
                                   <div class="author-block">ShahRukh Athar</div><br><div class="affiliation">Stony Brook University</div>
                                 </a>
                               </div>
-                              <div class="column" style="margin-bottom: 10px">
-                                <!-- <div class="col-sm-12"> -->
-                                <a href="https://www.grip.unina.it/members/verdoliva">
-                                  <!-- <img src="images/projects/headcraft/luisa_verdoliva.png" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%"  muted autoplay loop width="100%">
+                              <div class="column " style="margin-bottom: 10px">
+                                  <div onmouseout="annalisa_stop()" onmouseover="annalisa_start()">
+                                    <div class="hover_outer">
+                                      <div class="hover_inner" id='annalisa_image'>    
+                                      <img src='assets/headcraft/coauthors_photos/Annalisa.jpg'>
+                                    </div>
+                                    <video class="hover_video" id='annalisa_video' width=100% height=100% muted autoplay loop>
+                                        <source src="assets/headcraft/coauthors_videos/Annalisa.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                    </div>
+                                    <script type="text/javascript">
+                                      function annalisa_start() {
+                                        document.getElementById('annalisa_image').style.opacity = "1";
+                                        document.getElementById('annalisa_video').style.opacity = "0";
+                                      }
+                    
+                                      function annalisa_stop() {
+                                        document.getElementById('annalisa_image').style.opacity = "0";
+                                        document.getElementById('annalisa_video').style.opacity = "1";
+                                      }
+                                      annalisa_stop()
+                                    </script>
+                                    </div>
+                                  <!-- </td> -->
+                                  <!-- <video class="rgb" height="100%"  muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/Annalisa.mp4" type="video/mp4"/>
                                   </video>
+                                  <img src='assets/headcraft/coauthors_photos/Annalisa.jpg' width="256"> -->
+                                <a href="https://www.grip.unina.it/members/verdoliva">
                                   <div class="author-block">Luisa Verdoliva</div><br><div class="affiliation">University of Naples Federico II, TUM</div>
                                 </a>
                               </div>
-                              <div class="column" style="margin-bottom: 10px">
+                              <div class="column " style="margin-bottom: 10px">
                                 <!-- <div class="col-sm-12"> -->
                                 <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">
-                                  <!-- <img src="images/projects/headcraft/matthias_niessner.jpg" class="shadow img_authors img-circle img-responsive" width="100" height="100"> -->
-                                  <video class="rgb" height="100%"  muted autoplay loop width="100%">
+                                    <div onmouseout="matthias_stop()" onmouseover="matthias_start()">
+                                        <div class="hover_outer">
+                                            <div class="hover_inner" id='matthias_image' style="width: 130px; height: 130px; margin-left: 5px">    
+                                            <img src='assets/headcraft/coauthors_photos/Matthias.JPG'>
+                                        </div>
+                                        <video class="hover_video" id='matthias_video' width=100% height=100% muted autoplay loop>
+                                            <source src="assets/headcraft/coauthors_videos/Matthias.mp4" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                        </div>
+                                        <script type="text/javascript">
+                                            function matthias_start() {
+                                            document.getElementById('matthias_image').style.opacity = "1";
+                                            document.getElementById('matthias_video').style.opacity = "0";
+                                            }
+                        
+                                            function matthias_stop() {
+                                            document.getElementById('matthias_image').style.opacity = "0";
+                                            document.getElementById('matthias_video').style.opacity = "1";
+                                            }
+                                            matthias_stop()
+                                        </script>
+                                        </div>
+                                  <!-- <video class="rgb" height="100%"  muted autoplay loop width="100%">
                                     <source src="assets/headcraft/coauthors_videos/Matthias.mp4" type="video/mp4"/>
-                                  </video>
+                                  </video> -->
                                   <div class="author-block">Matthias Nießner</div><br><div class="affiliation">TUM</div>
                                 </a>
                               </div>
@@ -726,13 +859,13 @@
         slider.removeAttribute("tabIndex")
         // slider.addEventListener("mouseout", reset_orbit_controls);
         setup_render_divs("mesh_0", './assets/headcraft/random_generations/8.ply')
-        setup_render_divs("mesh_1", './assets/headcraft/random_generations/1.ply')
-        setup_render_divs("mesh_2", './assets/headcraft/random_generations/2.ply')
-        setup_render_divs("mesh_3", './assets/headcraft/random_generations/3.ply')
-        setup_render_divs("mesh_4", './assets/headcraft/random_generations/4.ply')
-        setup_render_divs("mesh_5", './assets/headcraft/random_generations/5.ply')
-        setup_render_divs("mesh_6", './assets/headcraft/random_generations/6.ply')
-        setup_render_divs("mesh_7", './assets/headcraft/random_generations/7.ply')
+        setup_render_divs("mesh_1", './assets/headcraft/random_generations/11.ply')
+        setup_render_divs("mesh_2", './assets/headcraft/random_generations/21.ply')
+        setup_render_divs("mesh_3", './assets/headcraft/random_generations/31.ply')
+        setup_render_divs("mesh_4", './assets/headcraft/random_generations/41.ply')
+        setup_render_divs("mesh_5", './assets/headcraft/random_generations/51.ply')
+        setup_render_divs("mesh_6", './assets/headcraft/random_generations/61.ply')
+        setup_render_divs("mesh_7", './assets/headcraft/random_generations/71.ply')
     };
 
     </script>
