@@ -33,7 +33,7 @@
                 <name>Artem Sevastopolsky</name>
               </p>
               <p><it>how to pronounce my last name:</it> <tt>[see vast awe pole ski]</tt></p>
-              <p><center>I am a Ph.D. student at <a href="https://www.niessnerlab.org/">TUM</a> (Visual Computing & AI lab led by <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">prof. Matthias Nießner</a>). Previously, I worked as a deep learning engineer at the Vision, Learning and Telepresence lab at <a href="http://research.samsung.com/aicenter_moscow">Samsung AI Center Moscow</a> and studied at <a href="http://skoltech.ru">Skoltech</a> under supervision of <a href="http://sites.skoltech.ru/compvision/members/vilem/">prof. Victor Lempitsky</a>. Currently, I am a research intern at <a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, <a href="https://www.youtube.com/watch?v=MVYrJJNdrEg">Codec Avatars Team</a>.
+              <p><center>I am a Ph.D. student at <a href="https://www.niessnerlab.org/">TUM</a> (Visual Computing & AI lab led by <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">prof. Matthias Nießner</a>). Previously, I worked as a deep learning engineer at the Vision, Learning and Telepresence lab at <a href="http://research.samsung.com/aicenter_moscow">Samsung AI Center Moscow</a> and studied at <a href="http://skoltech.ru">Skoltech</a> under supervision of <a href="http://sites.skoltech.ru/compvision/members/vilem/">prof. Victor Lempitsky</a>. I have recently been a research intern at <a href="https://about.meta.com/realitylabs/">Meta Reality Labs</a>, <a href="https://www.youtube.com/watch?v=MVYrJJNdrEg">Codec Avatars Team</a>.
               </p>
               <p>
               
@@ -69,23 +69,70 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+          <tr onmouseout="gaussianspeech_stop()" onmouseover="gaussianspeech_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='gaussianspeech_image'>
+                    <video width=100% height=100% muted autoplay loop>
+                    <source src="images/gaussianspeech.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video></div>
+                <img src='images/gaussianspeech_preview.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function gaussianspeech_start() {
+                  document.getElementById('gaussianspeech_image').style.opacity = "1";
+                }
+
+                function gaussianspeech_stop() {
+                  document.getElementById('gaussianspeech_image').style.opacity = "0";
+                }
+                // gaussianspeech_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://shivangi-aneja.github.io/projects/gaussianspeech/">
+                <papertitle>GaussianSpeech: Audio-Driven Gaussian Avatars</papertitle>
+              </a>
+              <br>
+              <a href="https://shivangi-aneja.github.io/">Shivangi Aneja,</a>
+              <strong>Artem Sevastopolsky,</strong>
+              <a href="https://niessnerlab.org/members/tobias_kirschstein/profile.html">Tobias Kirschstein,</a>
+              <a href="https://is.mpg.de/~jthies">Justus Thies,</a>
+              <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai,</a><br>
+              <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a>
+              <br>
+              <!-- <em>arXiv</em>, 2024 &nbsp <font color="red"></font> -->
+              <!-- <br> -->
+              <a href="https://shivangi-aneja.github.io/projects/gaussianspeech/">project page</a> /
+              <a href="https://youtu.be/2VqYoFlYcwQ">video</a> /
+              <a href="https://arxiv.org/abs/2411.18675">arXiv</a> /
+              <a href="https://github.com/shivangi-aneja/GaussianSpeech">code</a>
+              <br>
+              <p></p>
+              <p>
+                Given input speech signal, GaussianSpeech can synthesize photorealistic 3D-consistent talking human head avatars. Realistic and high-quality animations can be generated, including mouth interiors such as teeth, wrinkles, and specularities in the eyes. 
+              </p>
+            </td>
+          </tr>  
+
           <tr onmouseout="headcraft_stop()" onmouseover="headcraft_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <!-- <div class="two" id='headcraft_image'>
+                <div class="two" id='headcraft_image'>
                     <video width=100% height=100% muted autoplay loop>
                     <source src="images/headcraft.mp4" type="video/mp4">
                       Your browser does not support the video tag.
-                    </video></div> -->
+                    </video></div>
                 <img src='images/headcraft_preview.png' width="160">
               </div>
               <script type="text/javascript">
                 function headcraft_start() {
-                  // document.getElementById('headcraft_image').style.opacity = "1";
+                  document.getElementById('headcraft_image').style.opacity = "1";
                 }
 
                 function headcraft_stop() {
-                  // document.getElementById('headcraft_image').style.opacity = "0";
+                  document.getElementById('headcraft_image').style.opacity = "0";
                 }
                 headcraft_stop()
               </script>
@@ -235,8 +282,8 @@
                   <a href="https://faculty.skoltech.ru/people/evgenyburnaev">Evgeny Burnaev,</a>
                   <a href="http://sites.skoltech.ru/compvision/members/vilem/">Victor Lempitsky</a>
                   <br>
-                  <em>arXiv</em>, 2020 &nbsp <font color="red"></font>
-                  <br>
+                  <!-- <em>arXiv</em>, 2020 &nbsp <font color="red"></font> -->
+                  <!-- <br> -->
                   <a href="https://saic-violet.github.io/relightable-portrait/">project page</a> /
                   <a href="https://www.youtube.com/watch?v=Bsi0RMTdEaI">video</a> /
                   <a href="https://arxiv.org/abs/2012.09963">arXiv</a> /
