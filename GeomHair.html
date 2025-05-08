@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans">
+  <meta property="og:title" content="GeomHair"/>
+  <meta property="og:description" content="GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans"/>
+  <meta property="og:url" content="https://seva100.github.io/GeomHair/"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="images/projects/GeomHair/teaser.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="GeomHair">
+  <meta name="twitter:description" content="GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="images/projects/GeomHair/figure1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="Computer Vision, Computer Graphics, Digital Humans">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>GeomHair</title>
+  <!-- <link rel="icon" type="image/x-icon" href="images/scissors.png"> -->
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="css/bulma.min.css">
+  <link rel="stylesheet" href="css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="css/bulma-slider.min.css">
+  <link rel="stylesheet" href="css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="js/fontawesome.all.min.js"></script>
+  <script src="js/bulma-carousel.min.js"></script>
+  <script src="js/bulma-slider.min.js"></script>
+  <script src="js/index.js"></script>
+</head>
+
+<body>
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <!-- <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="https://egorzakharov.github.io">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a> -->
+  
+        <!-- <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            More Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://eth-ait.github.io/GaussianHaircut/">
+              GaussianHaircut
+            </a>
+            <a class="navbar-item" href="https://samsunglabs.github.io/NeuralHaircut/">
+              Neural Haircut
+            </a>
+            <a class="navbar-item" href="https://haar.is.tue.mpg.de/">
+              HAAR
+            </a>
+          </div>
+        </div> -->
+      </div>
+  
+    </div>
+  </nav>  
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-widescreen">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title"><i>GeomHair</i></h1>
+            <h1 class="title is-2 publication-title">Reconstruction of Hair Strands from Colorless 3D Scans</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://www.linkedin.com/in/rachmadio-l-403956132/?originalSubdomain=de" target="_blank">Rachmadio Noval Lazuardi</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://seva100.github.io/" target="_blank">Artem Sevastopolsky</a><sup>1*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://egorzakharov.github.io" target="_blank">Egor Zakharov</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://niessnerlab.org/" target="_blank">Matthias Nießner</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://vanessik.github.io" target="_blank">Vanessa Sklyarova</a><sup>2,3</sup>
+              </span>
+            </div>
+<div class="is-size-5 publication-authors">
+  <div class="author-block">
+    <sup>1</sup><a href="https://www.tum.de">Technical University of Munich</a>, 
+    <sup>2</sup><a href="https://is.mpg.de">Max Planck Institute for Intelligent Systems</a>, 
+    <sup>3</sup><a href="https://ait.ethz.ch">ETH Zurich</a>
+  </div>
+</div>
+
+<div class="is-size-5 publication-authors">
+  <div class="author-block">
+    <sup>*</sup>Equal contribution
+  </div>
+  </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- Arxiv PDF link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2409.14778" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- Github link -->
+                <span class="link-block">
+                  <a href="https://github.com/eth-ait/GaussianHaircut" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2409.14778" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaser video-->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body has-text-centered">
+        <img src="images/projects/GeomHair/figure1.png" alt="GeomHair Teaser" style="max-width: 100%; height: auto;" />
+        <h2 class="subtitle has-text-centered">
+          <strong>GeomHair</strong> reconstructs strand-based hairstyle using only a scan as input.
+        </h2>
+      </div>
+    </div>
+  </section>
+  <!-- End teaser video -->
+
+  <!-- Paper abstract -->
+  <section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose a novel method that reconstructs hair strands directly from colorless 3D scans by leveraging multi-modal hair orientation extraction.  
+            Hair strand reconstruction is a fundamental problem in computer vision and graphics that can be used for high-fidelity digital avatar synthesis, animation, and AR/VR applications.
+            However, accurately recovering hair strands from raw scan data remains challenging due to human hair's complex and fine-grained structure.
+            Existing methods typically rely on RGB captures, which can be sensitive to the environment and can be a challenging domain for extracting the orientation of guiding strands, especially in the case of challenging hairstyles.
+            To reconstruct the hair purely from the observed geometry, our method finds sharp surface features directly on the scan and estimates strand orientation through a neural 2D line detector applied to the renderings of scan shading.
+            Additionally, we incorporate a diffusion prior trained on a diverse set of synthetic hair scans, refined with an improved noise schedule, and adapted to the reconstructed contents via a scan-specific text prompt.
+            We demonstrate that this combination of supervision signals enables accurate reconstruction of both simple and intricate hairstyles without relying on color information.
+            To facilitate further research, we introduce Strands400, the largest publicly available dataset of hair strands with detailed surface geometry extracted from real-world data, which contains reconstructed hair strands from the scans of 400 subjects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End paper abstract -->
+
+  <!-- Youtube video -->
+  <section class="hero is-small is-light">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <!-- Paper video. -->
+        <h2 class="title is-3">Video Presentation</h2>
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <div class="publication-video">
+              <!-- Youtube embed code here -->
+              <iframe src="https://www.youtube.com/embed/ro_XeA75s5w?si=HAR0LF3s3h5Jk6z1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End youtube video -->
+
+  <!-- Main idea -->
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Main idea</h2>
+        <div class="row">
+          <div class="col-lg-16 text-white">
+            <img class="img-fluid mb-3" src="images/projects/GeomHair/figure2.png" alt="" >
+          </div>
+        </div>      
+        <div class="content has-text-justified is-four-fifths">
+          <p>
+            <strong>GeomHair</strong> consists of two main stages: orientations extraction (left) and strands reconstruction (right).
+            In the orientation extraction stage, we extract complementary orientation signals by combining 3D orientations from crest lines with 2D 
+            orientations obtained from TEED features applied to rendered shading of the scans. During reconstruction, we optimize a geometry texture to generate hair 
+            strands while enforcing multiple constraints: the orientation loss (<em>L<sub>orient</sub></em>) ensures strand growth aligns with our extracted 3D+2D orientation 
+            field, volume loss (<em>L<sub>volume</sub></em>) keeps strands near the surface, and Chamfer distance (<em>L<sub>chamfer</sub></em>) promotes uniform coverage of the hair volume. 
+            To enhance realism, we additionally incorporate a diffusion prior (<em>L<sub>prior</sub></em>) conditioned on hairstyle descriptions generated by a VQA model analyzing the input scan.
+          </p>
+        </div>
+        <div class="row">
+          <!-- <div class="col-lg-16 text-white">
+            <img class="img-fluid mb-3" src="images/figure2.png" alt="" >
+          </div> -->
+        </div>      
+        <div class="content has-text-justified is-four-fifths">
+          <!-- <p>
+            TODO             </p> -->
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- Video carousel
+  <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Results</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+
+              <source src="videos/results_cap001.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+        
+              <source src="videos/results_cap366.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+              <source src="videos/results_cap749.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+              <source src="videos/results_cap754.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+              <source src="videos/results_cap759.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End video carousel -->
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Comparison</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+
+              <source src="videos/comp_1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+              <source src="videos/comp_2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video3">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+
+              <source src="videos/comp_3.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video4">
+            <video poster="" id="video3" autoplay controls muted loop height="100%">\
+
+              <source src="videos/comp_4.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+  <!-- Video carousel -->
+  <!-- <section class="hero is-small">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">Physics simulation and relighting</h2>
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-video1">
+            <video poster="" id="video1" autoplay controls muted loop height="100%">
+
+              <source src="videos/physics_1.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-video2">
+            <video poster="" id="video2" autoplay controls muted loop height="100%">
+
+              <source src="videos/physics_2.mp4"
+              type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  <!-- End video carousel -->
+
+  <!-- Teaser video-->
+  <!-- <section class="hero is-small">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <h2 class="title is-3">Unreal Engine demo</h2>
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <!-- <source src="videos/demo.mp4"
+          type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          Hairstyles produced by our method can be easily imported into physically rendered and simulated virtual environments.
+        </h2>
+      </div>
+    </div>
+  </section> --> -->
+  <!-- End teaser video -->
+
+
+<!-- comparison figure -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">Comparison</h2>
+
+            <!-- Text now comes before the image -->
+      <div class="content has-text-justified is-four-fifths mb-3">
+        <p>
+          We compare our <strong>GeomHair</strong> method against state-of-the-art approaches—NeuralHaircut, Monohair, and GaussianHaircut. Unlike these methods, which require multi-view RGB images, GeomHair reconstructs hairstyles purely from 3D scans.
+        </p>
+      </div>
+
+
+      <div class="row">
+        <div class="col-lg-16 text-white">
+          <img class="img-fluid mb-3" src="images/projects/GeomHair/comparison.png" alt="Comparison image from PDF">
+        </div>
+      </div>      
+    </div>
+  </div>
+</section>
+
+
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3">More results</h2>
+
+      <!-- Text now comes before the image -->
+      <div class="content has-text-justified is-four-fifths mb-3">
+        <p>
+          We assembled a dataset of 400 high-resolution scans and applied <strong>GeomHair</strong> to each. Below, we show sampled strand reconstructions from the <strong>Strands400</strong> dataset.
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-16 text-white">
+          <img
+            class="img-fluid"
+            src="images/projects/GeomHair/strands400-1.png"
+            alt="Comparison image from PDF"
+            style="width: 95%;"
+          >
+        </div>
+      </div>  
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+  <!--BibTex citation -->
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{rachmadio2025geomhair,
+    title={GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans},
+    author={Lazuardi, Rachmadio N and Sevastopolsky, Artem and Zakharov, Egor and Nießner, Matthias and Sklyarova, Vanessa},
+    journal={ArXiv},
+    month={Sep}, 
+    year={2024} 
+}</code></pre>
+      </div>
+  </section>
+  <!--End BibTex citation -->
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SCPST0T02M"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-SCPST0T02M');
+</script>
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
