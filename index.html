@@ -62,12 +62,56 @@
             <td style="padding:20px;width:100%;vertical-align:middle">
               <heading>Featured Research</heading>
               <p>
-                At the moment I'm mostly interested in applications of computer vision to 3D computer graphics and rendering.
+                At the moment I'm mostly interested in the applications of computer vision to 3D computer graphics and rendering of Digital Humans.
               </p>
             </td>
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+          <tr onmouseout="geomhair_stop()" onmouseover="geomhair_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='geomhair_image'>
+                  <img src='images/geomhair_hair_only.png' width="160"></div>
+                <img src='images/geomhair_preview2.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function geomhair_start() {
+                  document.getElementById('geomhair_image').style.opacity = "1";
+                }
+
+                function geomhair_stop() {
+                  document.getElementById('geomhair_image').style.opacity = "0";
+                }
+                // gaussianspeech_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://seva100.github.io/GeomHair/">
+                <papertitle>GeomHair: Reconstruction of Hair Strands from Colorless 3D Scans</papertitle>
+              </a>
+              <br>
+              <a href="https://www.linkedin.com/in/rachmadio-l-403956132/?originalSubdomain=de">Rachmadio Noval Lazuardi*,</a>
+              <strong>Artem Sevastopolsky*,</strong>
+              <a href="https://egorzakharov.github.io">Egor Zakharov,</a>
+              <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner,</a>
+              <a href="https://vanessik.github.io">Vanessa Sklyarova</a>
+              <br>
+              <!-- <em>arXiv</em>, 2024 &nbsp <font color="red"></font> -->
+              <!-- <br> -->
+              <a href="https://seva100.github.io/GeomHair/">project page</a> /
+              <a href="https://www.youtube.com/watch?v=h9vqTiFo9As">video</a> /
+              <a href="https://arxiv.org/abs/2505.05376">arXiv</a>
+              <!-- <a href="https://github.com/shivangi-aneja/GaussianSpeech">code</a> -->
+              <br>
+              <p></p>
+              <p>
+                We generate 3D hair strands from a mesh of a human head, drawing the information purely from the sharp features of the mesh surface and not utilizing any color or texture.  
+                This allows us to collect a dataset of 400 people with strands.
+              </p>
+            </td>
+          </tr>  
 
           <tr onmouseout="gaussianspeech_stop()" onmouseover="gaussianspeech_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
@@ -99,7 +143,7 @@
               <strong>Artem Sevastopolsky,</strong>
               <a href="https://niessnerlab.org/members/tobias_kirschstein/profile.html">Tobias Kirschstein,</a>
               <a href="https://is.mpg.de/~jthies">Justus Thies,</a>
-              <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai,</a><br>
+              <a href="https://www.professoren.tum.de/en/dai-angela">Angela Dai,</a> <!--<br>-->
               <a href="https://www.niessnerlab.org/members/matthias_niessner/profile.html">Matthias Nießner</a>
               <br>
               <!-- <em>arXiv</em>, 2024 &nbsp <font color="red"></font> -->
