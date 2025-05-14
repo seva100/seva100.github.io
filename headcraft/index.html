@@ -202,7 +202,7 @@
                                       <img src='/assets/headcraft/coauthors_photos/Annalisa2.jpg'>
                                     </div>
                                     <video class="hover_video" id='annalisa_video' width=100% height=100% muted autoplay loop>
-                                        <source src="assets/headcraft/coauthors_videos/Annalisa.mp4_compat.mp4" type="video/mp4">
+                                        <source src="/assets/headcraft/coauthors_videos/Annalisa.mp4_compat.mp4" type="video/mp4">
                                         Your browser does not support the video tag.
                                     </video>
                                     </div>
@@ -237,7 +237,7 @@
                                             <img src='/assets/headcraft/coauthors_photos/Matthias.JPG'>
                                         </div>
                                         <video class="hover_video" id='matthias_video' width=100% height=100% muted autoplay loop>
-                                            <source src="assets/headcraft/coauthors_videos/Matthias.mp4_compat.mp4" type="video/mp4">
+                                            <source src="/assets/headcraft/coauthors_videos/Matthias.mp4_compat.mp4" type="video/mp4">
                                             Your browser does not support the video tag.
                                         </video>
                                         </div>
@@ -267,7 +267,7 @@
                             <div class="publication-links">
                                 <!-- PDF Link. -->
                                 <span class="link-block">
-                                    <a href="static/HeadCraft.pdf"
+                                    <a href="/static/HeadCraft.pdf"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
                                             <i class="fas fa-file-pdf"></i>
@@ -596,8 +596,8 @@
     <script type="module">
         import * as THREE from 'three';
 
-    import { PLYLoader } from './js/PLYLoader.js';
-    import { OrbitControls } from './js/OrbitControls.js'
+    import { PLYLoader } from '/js/PLYLoader.js';
+    import { OrbitControls } from '/js/OrbitControls.js'
     let div_to_scene = {
         "mesh_0": {
             "geo": null,
@@ -860,14 +860,14 @@
         let slider = document.getElementsByClassName("slider")[0]
         slider.removeAttribute("tabIndex")
         // slider.addEventListener("mouseout", reset_orbit_controls);
-        setup_render_divs("mesh_0", './assets/headcraft/random_generations/8.ply')
-        setup_render_divs("mesh_1", './assets/headcraft/random_generations/1.ply')
-        setup_render_divs("mesh_2", './assets/headcraft/random_generations/2.ply')
-        setup_render_divs("mesh_3", './assets/headcraft/random_generations/3.ply')
-        // setup_render_divs("mesh_4", './assets/headcraft/random_generations/4.ply')
-        // setup_render_divs("mesh_5", './assets/headcraft/random_generations/5.ply')
-        // setup_render_divs("mesh_6", './assets/headcraft/random_generations/6.ply')
-        // setup_render_divs("mesh_7", './assets/headcraft/random_generations/7.ply')
+        setup_render_divs("mesh_0", '/assets/headcraft/random_generations/8.ply')
+        setup_render_divs("mesh_1", '/assets/headcraft/random_generations/1.ply')
+        setup_render_divs("mesh_2", '/assets/headcraft/random_generations/2.ply')
+        setup_render_divs("mesh_3", '/assets/headcraft/random_generations/3.ply')
+        // setup_render_divs("mesh_4", '/assets/headcraft/random_generations/4.ply')
+        // setup_render_divs("mesh_5", '/assets/headcraft/random_generations/5.ply')
+        // setup_render_divs("mesh_6", '/assets/headcraft/random_generations/6.ply')
+        // setup_render_divs("mesh_7", '/assets/headcraft/random_generations/7.ply')
     };
 
     </script>
