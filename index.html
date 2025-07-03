@@ -160,6 +160,56 @@
             </td>
           </tr>  
 
+          <tr onmouseout="3dgh_stop()" onmouseover="3dgh_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='3dgh_image'>
+                    <video width=97% height=110% muted autoplay loop>
+                    <source src="./images/projects/3DGH/3dgh.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video></div>
+                <img src='images/projects/3DGH/3dgh_preview.png' width="160" height="160" style="margin-left: 0px; margin-top: 0px">
+              </div>
+              <script type="text/javascript">
+                function 3dgh_start() {
+                  document.getElementById('3dgh_image').style.opacity = "1";
+                }
+
+                function 3dgh_stop() {
+                  document.getElementById('3dgh_image').style.opacity = "0";
+                }
+                // 3dgh_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://c-he.github.io/projects/3dgh/">
+                <papertitle>3DGH: 3D Head Generation with Composable Hair and Face</papertitle>
+              </a>
+              <br>
+              <a href="https://c-he.github.io/">Chengan He,</a>
+              <a href="https://junxuan-li.github.io/">Junxuan Li,</a>
+              <a href="https://niessnerlab.org/members/tobias_kirschstein/profile.html">Tobias Kirschstein,</a>
+              <strong>Artem Sevastopolsky,</strong>
+              <a href="https://shunsukesaito.github.io/">Shunsuke Saito,</a>
+              <a href="https://qytan.com/">Qingyang Tan,</a>
+              <a href="https://scholar.google.de/citations?user=Wx62iOsAAAAJ&hl=en&oi=sra">Javier Romero,</a>
+              <a href="https://sites.google.com/site/zjucaochen/home">Chen Cao,</a>
+              <a href="https://graphics.cs.yale.edu/people/holly-rushmeier">Holly Rushmeier,</a>
+              <a href="https://sites.google.com/view/gjnam">Giljoo Nam</a>
+              <br>
+              <em>SIGGRAPH (ACM ToG Journal Paper)</em>, 2025 &nbsp <font color="red"></font>
+              <br>
+              <a href="https://c-he.github.io/projects/3dgh/">project page</a> /
+              <a href="https://arxiv.org/abs/2506.20875">arXiv</a>
+              <!-- <a href="https://github.com/shivangi-aneja/avat3r">code</a> -->
+              <br>
+              <p></p>
+              <p>
+                A generative model that transforms separate, disentangled latents for face and hair to  a Gaussian rendering of a human head from an arbitrary viewpoint.
+              </p>
+            </td>
+          </tr>  
+
           <tr onmouseout="avat3r_stop()" onmouseover="avat3r_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
