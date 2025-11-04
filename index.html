@@ -68,6 +68,58 @@
           </tr>
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          
+          <tr onmouseout="densemarks_stop()" onmouseover="densemarks_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <!-- <video width="160" height="160" muted autoplay loop>
+                <source src="densemarks/densemarks_videos/densemarks_Ky5Y99wb_00_0.mp4" type="video/mp4">
+              </video> -->
+              <div class="one">
+                <div class="two" id='densemarks_image'>
+                    <video width=100% height=100% muted autoplay loop>
+                    <source src="./images/densemarks.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video></div>
+                <img src='images/densemarks_preview.png' width="160">
+              </div>
+            </td>
+            <script type="text/javascript">
+              function densemarks_start() {
+                document.getElementById('densemarks_image').style.opacity = "1";
+              }
+
+              function densemarks_stop() {
+                document.getElementById('densemarks_image').style.opacity = "0";
+              }
+            </script>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+              <a href="https://diddone.github.io/densemarks/">
+                <papertitle>DenseMarks: Learning Canonical Embeddings for Human Heads Images via Point Tracks</papertitle>
+              </a>
+              <br>
+              <a href="https://diddone.github.io/"> Dmitrii Pozdeev</a>,
+              <a href="https://artonson.github.io">Alexey Artemov</a>,
+              <a href="https://anantarb.github.io/">Ananta R. Bhattarai</a>,
+              <strong>Artem Sevastopolsky</strong>
+              <br>
+              <!-- <em>arXiv</em>, 2025 -->
+              <!-- <br> -->
+              <a href="https://diddone.github.io/densemarks/">project page</a>
+              /
+              <a href="https://diddone.github.io/densemarks/Densemarks_ICLR_w_stereo_rec.pdf">paper</a>
+              /
+              <a href="https://www.youtube.com/watch?v=o8DOOYFW0gI">video</a>
+              /
+              <a href="https://github.com/diddone/densemarks">code</a>
+              /
+              <a href="https://huggingface.co/diddone/densemarks">HuggingFace</a>
+              <p></p>
+              <p>
+                The method proposing a replacement of standard face landmarks with a dense per-pixel embeddings of a full human head that live in 3D canonical space.
+                Predicted embeddings enable a variety of applications, ranging from head tracking to MVS.
+              </p>
+            </td>
+          </tr>
 
           <tr onmouseout="geomhair_stop()" onmouseover="geomhair_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
